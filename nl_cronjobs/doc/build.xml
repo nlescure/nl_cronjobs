@@ -1,4 +1,4 @@
-<project name="ezcronjobs" default="build">
+<project name="nlcronjobs" default="build">
 
 	<target name="clean">
 		<delete dir="build" />

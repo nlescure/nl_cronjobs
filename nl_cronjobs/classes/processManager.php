@@ -30,7 +30,7 @@ class ProcessManager {
 	 * @return ProcessManager ProcessManager
 	 */
 	public static function instance() {
-		$ini = eZINI::instance('ezcronjobs.ini');
+		$ini = eZINI::instance('nlcronjobs.ini');
 		
 		$scriptRoot = $_SERVER['DOCUMENT_ROOT'];
 		$executable = $ini->variable('ProcessSettings','PhpCliPath');

@@ -1,6 +1,6 @@
 <?php /*
 
 [RegionalSettings]
-TranslationExtensions[]=ezcronjobs
+TranslationExtensions[]=nl_cronjobs
 
 */ ?>

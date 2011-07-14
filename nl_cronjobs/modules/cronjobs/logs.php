@@ -8,8 +8,7 @@ $Module = $Params['Module'];
 $tpl = eZTemplate::factory();
 $tpl->setVariable( 'module', $Module );
 
-$root = '/var/www/ezpublish_2011_6/';
-$manager = ProcessManager::instance($root);
+$manager = ProcessManager::instance();
 
 $tpl->setVariable( 'output', file_get_contents($root.$manager->getOutputFile()) );
 $tpl->setVariable( 'errors', file_get_contents($root.$manager->getErrorFile()) );

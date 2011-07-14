@@ -1,15 +1,15 @@
 <?php /*
 
 [NavigationPart]
-Part[ezcronjobnavigationpart]=eZ Cronjobs
+Part[nlcronjobnavigationpart]=NL Cronjobs
 
 [TopAdminMenu]
-Tabs[]=ezcronjobs
+Tabs[]=nlcronjobs
 
-[Topmenu_ezcronjobs]
-NavigationPartIdentifier=ezcronjobnavigationpart
-Name=eZ Cronjobs
-Tooltip=eZ Cronjobs dashboard
+[Topmenu_nlcronjobs]
+NavigationPartIdentifier=nlcronjobnavigationpart
+Name=Cronjobs
+Tooltip=Cronjobs dashboard
 URL[]
 URL[default]=cronjobs/list
 Enabled[]

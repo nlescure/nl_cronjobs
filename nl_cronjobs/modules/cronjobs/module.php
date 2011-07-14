@@ -7,22 +7,22 @@
  *
  */
 
-$Module = array( 'name' => 'eZ Cronjobs' );
+$Module = array( 'name' => 'NL Cronjobs' );
 
 $ViewList = array();
 
 $ViewList['list'] = array(
     'script' => 'list.php',
-    'default_navigation_part' => 'ezcronjobnavigationpart'
+    'default_navigation_part' => 'nlcronjobnavigationpart'
     );
 
 $ViewList['launch'] = array(
     'script' => 'launch.php',
-    'default_navigation_part' => 'ezcronjobnavigationpart'
+    'default_navigation_part' => 'nlcronjobnavigationpart'
     );
     
 $ViewList['logs'] = array(
     'script' => 'logs.php',
-    'default_navigation_part' => 'ezcronjobnavigationpart'
+    'default_navigation_part' => 'nlcronjobnavigationpart'
     );
 ?>

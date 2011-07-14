@@ -1,7 +1,7 @@
 <?php /* #?ini charset="utf-8"?
 
 [ExtensionSettings]
-DesignExtensions[]=ezcronjobs
+DesignExtensions[]=nl_cronjobs
 
 [StylesheetSettings]
 BackendCSSFileList=cronjobs.css

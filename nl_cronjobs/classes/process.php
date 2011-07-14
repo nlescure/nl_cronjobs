@@ -30,7 +30,6 @@ class Process {
 		);
 		
 		//launch scripts
-		print_r($this);
 		$this->resource = proc_open("$executable $root/".$this->script, $descriptorspec, $this->pipes, null, null);
 		$this->startTime = time();
 	}

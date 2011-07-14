@@ -4,7 +4,7 @@ You can see cronjobs parts, and lauch them in background.
 Output and errors are stored in config files.
 
 === How to install ? ===
-1. Create "ezcronjobs" directory in your "extension" folder.
+1. Create "nl_cronjobs" directory in your "extension" folder.
 2. Put all files you get (classes, design, modules, settings, etc.)
 3. Activate the extension using admin ezpublish interface, and regenerate autoloads
 4. Clear all caches.
