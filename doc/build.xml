@@ -1,0 +1,26 @@
+<project name="ezcronjobs" default="build">
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+
+	<target name="prepare">
+		<mkdir dir="build/logs" />
+	</target>
+
+	<target name="docs">
+		<phpdoc title="API Documentation" destdir="apidocs" sourcecode="false"
+			output="HTML:Smarty:PHP">
+			<fileset dir="..">
+				<include name="**/*.php" />
+			</fileset>
+			<projdocfileset dir=".">
+				<include name="README" />
+				<include name="INSTALL" />
+				<include name="CHANGELOG" />
+			</projdocfileset>
+		</phpdoc>
+	</target>
+
+	<target name="build" depends="docs" />
+</project>

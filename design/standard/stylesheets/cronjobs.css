@@ -1,0 +1,41 @@
+.cronjobs-list img {
+	display:none;
+	float:left;
+	margin-top:10px;
+	/*visibility:hidden;*/
+}
+
+.cronjobs-list h3 {
+	display:block;
+	float:left;
+	line-height:32px;
+	padding-bottom:7px;
+}
+
+.cronjobs-list hr {
+	padding:5px;
+}
+
+.cronjobs-list iframe {
+	width:100%;
+	height:500px;
+	border:1px solid grey;
+}
+
+.cronjobs-list .clear {
+	clear:both;
+}
+.cronjobs-list .left-column {
+	width:50%;
+	float:left;
+}
+
+.cronjobs-list .right-column {
+	width:50%;
+	float:left;
+}
+
+.cronjobs-list #results {
+	color:green;
+	min-height:100px;
+}
