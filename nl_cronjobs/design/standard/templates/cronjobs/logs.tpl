@@ -1,13 +1,15 @@
 {literal}
 <script type="text/javascript">
-	$(document).ready(function() {
-		var element = jQuery('#contents');
-		jQuery('html, body').animate({scrollTop: element.height()}, 800);
-		setTimeout( function() {
-						location.reload()
-					}, 20000
-		);
-	 });     
+	 if( !(typeof(jQuery) == 'undefined' || jQuery === null) ) {
+		jQuery(document).ready(function() {
+			var element = jQuery('#contents');
+			jQuery('html, body').animate({scrollTop: element.height()}, 800);
+			setTimeout( function() {
+							location.reload()
+						}, 20000
+			);
+		 });  
+	}	 
 </script>
 {/literal}
 
