@@ -25,7 +25,7 @@
 		  },
 		  success: function() {
 			  jQuery('#loader_'+part).fadeOut("slow");
-			  jQuery("#result_"+part).append('Success.<br/>');
+			  jQuery("#result_"+part).append('Success');
 		  }
 		});
 	}

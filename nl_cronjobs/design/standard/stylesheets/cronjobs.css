@@ -1,7 +1,6 @@
 .cronjobs-list img {
 	display:none;
 	float:left;
-	margin-top:10px;
 	/*visibility:hidden;*/
 }
 
@@ -18,15 +17,20 @@
 	float:left;
 	line-height:32px;
 	padding-bottom:7px;
+	margin:0px;
 }
 
 .cronjobs-list hr {
 	padding:5px;
 }
 
+.cronjobs-list ul {
+	padding-bottom:15px;
+}
+
 .cronjobs-list iframe {
 	width:100%;
-	height:500px;
+	height:700px;
 	border:1px solid grey;
 }
 
@@ -34,12 +38,11 @@
 	clear:both;
 }
 .cronjobs-list .left-column {
-	width:400px;
+	width:45%;
 	float:left;
-	padding:10px;
 }
 
 .cronjobs-list .right-column {
 	width:50%;
-	float:left;
+	float:right;
 }
