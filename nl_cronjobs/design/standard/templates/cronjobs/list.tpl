@@ -4,7 +4,13 @@
 	Call url to lauch the cronjob, and display the loader
 	*/
 	function launch(part) {
+		//display the loader
 	 	jQuery('#loader_'+part).fadeIn("slow"); 
+		
+		//delete the last result
+		jQuery("#result_"+part).html('');
+		
+		//launch cron in ajax
 		jQuery.ajax({
 		  url: "{/literal}{'/cronjobs/launch'|ezurl('no')}{literal}",
 		  type: "POST",
@@ -19,7 +25,7 @@
 		  },
 		  success: function() {
 			  jQuery('#loader_'+part).fadeOut("slow");
-			  $("#results").append('Cronjob "'+part+'" has succeeded.<br/>');
+			  jQuery("#result_"+part).append('Success.<br/>');
 		  }
 		});
 	}
@@ -44,6 +50,7 @@
 			
 			<div class="box-ml"><div class="box-mr"><div class="box-content">
 				<h3><a href="#" onclick="launch('global')">Global scripts</a></h3> <img src={"ajax-loader.gif"|ezimage} id="loader_global" width="32" height="32" />
+				<div class="cronjob-result" id="result_global"></div>
 				<div class="clear"></div>
 				<ul>
 				{foreach $globalScripts as $script}
@@ -52,7 +59,8 @@
 				</ul>
 				
 				{foreach $scripts as $groupName => $groupScripts}
-					<h3><a href="#" onclick="launch('{$groupName}')">{$groupName}</a></h3>  <img src={"ajax-loader.gif"|ezimage} id="loader_{$groupName}" width="32" height="32" />
+					<h3><a href="#" onclick="launch('{$groupName}')">{$groupName}</a></h3>  <img src={"ajax-loader.gif"|ezimage} id="loader_{$groupName}" width="32" height="32" /> 
+					<div class="cronjob-result" id="result_{$groupName}"></div>
 					<div class="clear"></div>
 					<ul>
 					{foreach $groupScripts as $script}

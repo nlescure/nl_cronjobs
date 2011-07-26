@@ -5,6 +5,14 @@
 	/*visibility:hidden;*/
 }
 
+.cronjobs-list  .cronjob-result  {
+	color:green;
+	display:block;
+	float:right;
+	line-height:32px;
+	padding:0px;
+}
+
 .cronjobs-list h3 {
 	display:block;
 	float:left;
@@ -26,16 +34,12 @@
 	clear:both;
 }
 .cronjobs-list .left-column {
-	width:50%;
+	width:400px;
 	float:left;
+	padding:10px;
 }
 
 .cronjobs-list .right-column {
 	width:50%;
 	float:left;
-}
-
-.cronjobs-list #results {
-	color:green;
-	min-height:100px;
 }
