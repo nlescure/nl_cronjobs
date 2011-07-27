@@ -1,15 +1,17 @@
 === What is it ? ===
 This extension add a new tab to eZPublish admin interface.
 You can see cronjobs parts, and lauch them in background.
+YOu also can hide some cronjobs if youo want.
 Output and errors are stored in config files.
 
 === How to install ? ===
 1. Create "nl_cronjobs" directory in your "extension" folder.
 2. Put all files you get (classes, design, modules, settings, etc.)
 3. Activate the extension using admin ezpublish interface, and regenerate autoloads
-4. Clear all caches.
+4. Check the nlcronjobs.ini.append.php to check your setting, such as path to phpcli or crojobs parts you want to disallow.
+5. Clear all caches.
 You should see the new tab.
 
 === Who is the author ? ===
 Nicolas Lescure
-nlescure on github and twitter.
+nlescure on github (https://github.com/nlescure) and twitter (http://twitter.com/#!/nlescure).

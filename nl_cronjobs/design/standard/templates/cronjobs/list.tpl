@@ -49,14 +49,16 @@
 			</div></div></div></div></div></div>
 			
 			<div class="box-ml"><div class="box-mr"><div class="box-content">
-				<h3><a href="#" onclick="launch('global')">Global scripts</a></h3> <img src={"ajax-loader.gif"|ezimage} id="loader_global" width="32" height="32" />
-				<div class="cronjob-result" id="result_global"></div>
-				<div class="clear"></div>
-				<ul>
-				{foreach $globalScripts as $script}
-					<li>{$script}</li>
-				{/foreach}
-				</ul>
+				{if $globalScripts|count|gt(0)}
+					<h3><a href="#" onclick="launch('global')">Global scripts</a></h3> <img src={"ajax-loader.gif"|ezimage} id="loader_global" width="32" height="32" />
+					<div class="cronjob-result" id="result_global"></div>
+					<div class="clear"></div>
+					<ul>
+					{foreach $globalScripts as $script}
+						<li>{$script}</li>
+					{/foreach}
+					</ul>
+				{/if}
 				
 				{foreach $scripts as $groupName => $groupScripts}
 					<h3><a href="#" onclick="launch('{$groupName}')">{$groupName}</a></h3>  <img src={"ajax-loader.gif"|ezimage} id="loader_{$groupName}" width="32" height="32" /> 

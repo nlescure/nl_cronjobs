@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * List all active and not forbidden cronjobs parts
  */
 
 $Module = $Params['Module'];
@@ -8,19 +8,30 @@ $scriptID = $Params['ScriptID'];
 
 $tpl = eZTemplate::factory();
 $tpl->setVariable( 'module', $Module );
-//$tpl->setVariable( 'script', $script );
+
+//get forbidden parts
+$nlCronjobsIni = eZINI::instance( 'nlcronjobs.ini' );
+$forbiddenParts = $nlCronjobsIni->variable( 'Forbidden', 'Parts' );
 
 //get cronjobs.ini and global scripts
 $ini = eZINI::instance( 'cronjob.ini' );
-$globalScripts = $ini->variable( 'CronjobSettings', 'Scripts' );
+$globalScripts = array();
+if( !in_array('global',$forbiddenParts)  ) {
+	$globalScripts = $ini->variable( 'CronjobSettings', 'Scripts' );
+}
+
 
 //get cronjobs parts
 $scripts = array();
 foreach($ini->groups() as $groupName => $group) {
-	//just get CronjobPart groups
+	
+	//just get CronjobPart groups (i.e. CronjobPart-frequent => frequent)
 	if(preg_match('/^CronjobPart-(.*)/i', $groupName, $matches) ) {
-		//get scripts
-		$scripts[$matches[1]] = $ini->variable( $groupName, 'Scripts' );
+		//if the cronjobs part is not forbidden
+		if( !in_array($matches[1],$forbiddenParts)  ) {
+			//get scripts
+			$scripts[$matches[1]] = $ini->variable( $groupName, 'Scripts' );
+		}
 	}
 }
 
