@@ -14,11 +14,11 @@ $outputs = array();
 
 if( $http->hasVariable('log_output') ) {
 	$manager->cleanOutputFile();
-	$outputs[] = 'Output file cleared.';
+	$outputs[] = ezpI18n::tr( 'extension/nlcronjobs', 'Output file cleared.' );
 }
 if( $http->hasVariable('log_error') ) {
 	$manager->cleanErrorFile();
-	$outputs[] = 'Error file cleared.';
+	$outputs[] = ezpI18n::tr( 'extension/nlcronjobs', 'Error file cleared.' );
 }
 
 $tpl->setVariable( 'outputs', $outputs );
