@@ -17,6 +17,11 @@ else {
 	$part = '';
 }
 
+//special case : "global" means nothing for runcronjobs
+if( $part == 'global' ) {
+	$part = '';
+} 
+
 //create the manager, add scripts, and launch them
 $manager = ProcessManager::instance();
 $manager->addScript("runcronjobs.php $part");
