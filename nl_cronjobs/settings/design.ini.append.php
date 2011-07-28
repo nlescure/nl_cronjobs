@@ -4,7 +4,7 @@
 DesignExtensions[]=nl_cronjobs
 
 [StylesheetSettings]
-BackendCSSFileList=cronjobs.css
+BackendCSSFileList[]=cronjobs.css
 
 
 */ ?>
