@@ -107,7 +107,21 @@ class ProcessManager {
 		$this->errorFile = $file;
 	}
 	
-	 
+	/**
+	 * Clear the output file
+	 */
+	public function cleanOutputFile() {
+		file_put_contents($this->outputFile, '');
+	}
+	
+	/**
+	* Clear the error file
+	*/
+	public function cleanErrorFile() {
+		file_put_contents($this->errorFile, '');
+	}
+	
+	
 	private $executable;
 	private $root;
 	private $scripts = array();

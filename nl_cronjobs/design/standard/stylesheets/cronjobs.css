@@ -34,6 +34,14 @@
 	border:1px solid grey;
 }
 
+.cronjobs-list label {
+	display:inline;
+}
+
+.cronjobs-list .button {
+	margin-top:15px;
+}
+
 .cronjobs-list .clear {
 	clear:both;
 }
@@ -45,4 +53,9 @@
 .cronjobs-list .right-column {
 	width:50%;
 	float:right;
+}
+
+.cronjobs-list .message-feedback ul {
+	padding-bottom:0px;
+	color:#3e8d29;
 }

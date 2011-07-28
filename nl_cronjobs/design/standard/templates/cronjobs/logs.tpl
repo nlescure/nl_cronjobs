@@ -1,3 +1,4 @@
+{* scroll to bottom and reload page *}
 {literal}
 <script type="text/javascript">
 	 if( !(typeof(jQuery) == 'undefined' || jQuery === null) ) {
@@ -13,14 +14,16 @@
 </script>
 {/literal}
 
+<a name="top"></a>
+
+{* menu *}
 <a href="#end_output">Last output</a> - 
 <a href="#end_error">Last errors</a> - 
-<a href="#" onclick="location.reload()">Reload</a>
-
+<a href="#end_output" onclick="location.reload()">Reload</a>
+<hr />
+		
 <div id="contents">
-	<a name="top"></a>
 	<div class="output">Output: <br>
-		<hr />
 		{$output|nl2br}
 		<a name="end_output"></a>
 		<br/>
@@ -33,5 +36,10 @@
 		{$errors|nl2br}
 		<a name="end_error"></a>
 	</div>
-	<a href="#top">Top</a>
+	
+	<hr />
+	<a href="#end_output">Last output</a> - 
+	<a href="#top">Top</a> - 
+	<a href="#end_output" onclick="location.reload()">Reload</a>
+	
 </div>

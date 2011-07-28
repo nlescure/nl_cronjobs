@@ -9,5 +9,6 @@
 <ul>
     <li><div><a href={'/cronjobs/list/'|ezurl}>{'Cronjobs list'|i18n( 'extension/nlcronjobs' )}</a></div></li>
     <li><div><a href={'/cronjobs/logs/'|ezurl}>{'Cronjobs logs'|i18n( 'extension/nlcronjobs' )}</a></div></li>
+    <li><div><a href={'/cronjobs/clear/'|ezurl}>{'Clear logs'|i18n( 'extension/nlcronjobs' )}</a></div></li>
 </ul>
 {* DESIGN: Content END *}</div></div></div></div></div></div>
