@@ -17,7 +17,11 @@ $Result = array();
 $Result['content'] = $tpl->fetch( 'design:cronjobs/logs.tpl' );
 $Result['left_menu'] = "design:cronjobs/backoffice_left_menu.tpl";
 //$Result['pagelayout'] = null;
-$Result['path'] = '';
+$Result['path'] = array( array( 'url' => '/cronjobs/logs/',
+                                'text' => ezpI18n::tr( 'ezcronjobs', 'Cronjobs' ) ),
+                         array( 'url' => false,
+                                'text' => 'logs' ) );
+
 
 
 ?>
