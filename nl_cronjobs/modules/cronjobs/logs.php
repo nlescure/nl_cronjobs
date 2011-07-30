@@ -10,8 +10,8 @@ $tpl->setVariable( 'module', $Module );
 
 $manager = ProcessManager::instance();
 
-$tpl->setVariable( 'output', file_get_contents($root.$manager->getOutputFile()) );
-$tpl->setVariable( 'errors', file_get_contents($root.$manager->getErrorFile()) );
+$tpl->setVariable( 'output', file_get_contents($manager->getOutputFile()) );
+$tpl->setVariable( 'errors', file_get_contents($manager->getErrorFile()) );
 
 $Result = array();
 $Result['content'] = $tpl->fetch( 'design:cronjobs/logs.tpl' );
