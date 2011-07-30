@@ -45,6 +45,10 @@
         <translation>Dernières erreurs</translation>
     </message>
     <message>
+        <source>Top</source>
+        <translation>Haut</translation>
+    </message>
+    <message>
         <source>Reload</source>
         <translation>Recharger</translation>
     </message>
