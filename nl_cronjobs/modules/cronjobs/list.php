@@ -4,7 +4,6 @@
  */
 
 $Module = $Params['Module'];
-$scriptID = $Params['ScriptID'];
 
 $tpl = eZTemplate::factory();
 $tpl->setVariable( 'module', $Module );
