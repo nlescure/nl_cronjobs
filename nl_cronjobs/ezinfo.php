@@ -6,7 +6,7 @@ class nl_cronjobsInfo
     {
         return array( 'Name' => "NL Cronjobs",
                       'Version' => "1.4",
-                      'Copyright' => "Nicolas Lecure",
+                      'Copyright' => "Nicolas Lescure",
                       'License' => "GNU General Public License v2.0"
                      );
     }
