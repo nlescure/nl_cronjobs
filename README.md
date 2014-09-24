@@ -1,4 +1,4 @@
-nl_cronjobs
+nl_cronjobs for eZ Publish (4 and 5)
 ===========
 
 Add a tab to eZ Publish admin interface to launch cronjobs manually from the back office.
